@@ -1,0 +1,394 @@
+/*Family-font: Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); /*uso "@import" para optimizar la cantidad de líneas de código*/
+
+:root {
+    /* Color principal del sitio (Rosa vibrante)*/
+    --color-primary: #8203cb;
+    /* Texto principal y general del cuerpo(Contraste sobre fondo oscuro) */
+    --color-text-main: #f0f8ff;
+    /* Capas oscuras para degradados del header (disimula el contraste de los enlaces del <nav>)*/
+    --color-gradient-dark: rgb(28 28 28 / 60%);
+    /* Capas rosas para colorear las partes blancas del fondo */
+    --color-gradient-light: rgba(138, 231, 245, 0.95);
+    /* Fondo semitransparente para contrastar entre las letras y el fondo*/
+    --color-box-bg: rgb(0 0 0 / 40%);
+    /* Color de fondo para textos de segunda jerarquía */
+    --color-box-bg2: rgba(200, 200, 200, 0.4);
+    /* Color de los enlaces de navegación y subtítulos */
+    --color-secondary: #fbf1a3;
+    /* Tipografía para el título principal (H1) */
+    --color-h-1: #f7f2f7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+/*  ==========================================
+    ESTILOS GENERALES Y CONFIGURACION DE FONDO
+    ========================================== */
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-primary);
+    /*Se toma un fondo de tono claro para que el color coincida acorde al utilizado en el codigo mediante el blend*/
+    background-image: url('../assets/img/bg2.jpg');
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    min-width: 100%; /* estas dimensiones ya cumplen funciones responsive ------*/
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-main);
+    padding: 2%; 
+    }
+
+/*  ================================
+    ENCABEZADO Y PANEL DE NAVEGACIÓN
+    ================================ */
+
+header{ /*Este elemento es para contener las configuraciones de fondo y el paddding*/
+    background-image:linear-gradient(45deg, var(--color-gradient-dark), var(--color-gradient-light)), url('../assets/img/headerbg.jpg');
+    background-blend-mode: multiply;
+    padding: 1.5rem 1rem; /* 1.5rem arriba/abajo y 1rem a los laterales */
+    margin: 0 0 1.5rem 0;
+    }
+.header-principal { /*Separar entre contenedores flex y fondo */
+    display: flex;
+    flex-direction: column;          /* mobile-first */
+    align-items: center;          
+    width:100%;
+}
+h1{
+    font-size: clamp(2rem, 8vw, 2.9rem); /* Se adapta dinámicamente sin romper */
+    line-height: 1.1;
+    color: var(--color-h-1);
+    text-align: center;
+    }
+
+@media (max-width: 768px) { /*Que los enlaces panel de navegación se adapte a pantallas medianas y se apile en una columna*/
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+.boton-menu{--bs-navbar-color: var(--color-h-1);
+background-color: var(--color-box-bg);
+border: var(--bs-border-width) var(--color-h-1);}
+.mi-navbar-links{
+    --bs-navbar-hover-color: var(--color-secondary);
+    --bs-navbar-active-color: var(--color-secondary);
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+}
+
+/* Contenedor de los enlaces */
+.mi-navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    justify-content: space-around;
+    margin-left: 1rem;
+    --bs-nav-link-color: var(--color-h-1);
+}
+ 
+.logo-header{
+    max-width: 130px;
+    height: auto;
+    }
+
+/*  ========================================
+    ESTILOS GENERALES DE LOS CONTENIDOS MAIN
+    ======================================== */
+
+section{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--color-box-bg); /*El fondo de contraste se incluye aqui para que no se rompa el diseño al agregar margin_bottom para incluir espaciado entre entre parrafos distintos*/
+    border-radius: 0.5rem;
+    }
+h2{
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration:underline;
+    text-decoration-color: var(--color-secondary);
+    text-decoration-thickness: 0.25rem; /*grosor seleccionado mediante DevTools*/
+    }
+h3{
+    margin-bottom: 0.5rem;
+}
+p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+article{
+    margin: 1rem;
+    padding: 1rem; /*necesarios para una estetica mas tridimencional y dandole mas profundidad a la jerarquia de los elementos*/
+    background-color: var(--color-box-bg2); /*segunda capa de color para aumentar la opacidad y resaltar jerarquias menores*/
+    border-radius: 0.5rem;
+}
+
+/*  ============================
+    ESTILOS GENERALES DEL FOOTER
+    ============================*/
+    
+footer {
+    /* Usamos grid también para el contenedor general del footer */
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; /* Centra horizontalmente los elementos hijos */
+    padding: 2rem 1rem;
+    background-color: var(--color-box-bg2);
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.footer-content {
+    display: grid;
+    /* En celular se apilan en una sola columna */
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    justify-items: center; /* Centra el contenido de las secciones */
+    text-align: center;
+}
+.footer-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+footer a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--gradient-dark);
+}
+
+/*  ===========================
+    ESTILOS PARA INDEX.HTML
+    ===========================*/
+
+.index-grid{
+    display: grid; /*asegura que la vista sea correcta en mobile*/
+    grid-template-columns: 1fr;
+    gap:1.5rem;
+    padding: 1rem;
+    width:100%;
+}
+
+/*  ===========================
+    ESTILOS PARA SERVICIOS.HTML
+    ===========================*/
+
+.project-container {
+    display: flex;
+    flex-direction: row; /*necesito que las cartas se alineen horizontalmente*/
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    margin: 20px 10px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-box-bg);
+    flex: 1 1 30%; /* Se estiran o encogen, pero no bajan del tercio de pantalla */
+    margin: 0 0 20px 0 /*Para separar los H3 del contenido de las cartas*/;
+    padding: 15px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column; /*asegura un comportamiento ordenado del texto*/
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--color-box-bg2);
+    border-radius: 0.5rem;
+}
+
+/* --- Estilo para pagina de servicios --- */
+.seccion-servicios {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 1200px; /* Para que no se estire de más en pantallas gigantes */
+}
+
+/* --- DISEÑO BASE MOBILE-FIRST: Apilado a una columna --- */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* --- Estilo de cada tarjeta de servicio --- */
+.card-servicios {
+    background-color: var(--color-box-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-servicios img{
+    margin-top:auto;
+    margin-bottom:auto; /*dividen el espacio sobrante del contenedor para centrar la imagen*/
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+/* ============
+   CAROUSEL FAQ
+   ============ */
+
+#faqCarousel {
+    max-width: 90%;
+    margin: 2rem auto; /* Espaciado alrededor del carrusel */
+}
+
+.carousel-content {
+    background-color: var(--color-box-bg);
+    padding: 2rem 4.5rem; /*padding horizontal para alejar el texto de las flechas de desplazamiento del carrusel*/
+    border-radius: 0.5rem;
+    text-align: center;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-content h3 {
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+}
+
+.carousel-content p {
+    color: var(--color-text-main);
+    margin: 1rem 2rem;
+    line-height: 1.6;
+}
+
+/* Controles (flechas) */
+.carousel-control-prev-icon {
+    position: relative;
+    left: -20px; /* Ajusta la posición de la flecha izquierda */
+    width: 2rem;
+}
+.carousel-control-next-icon {
+    position: relative;
+    right: -20px; /* Ajusta la posición de la flecha derecha */
+    width: 2rem;
+}
+
+/* Indicadores (puntitos) */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-secondary);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px){
+.header-principal {
+    display: flex;
+    flex-direction: row;          /* Distribuye izquierda y derecha en una misma línea */
+    justify-content: space-between; /* Separa los extremos: bloque de texto izquierda, logo derecha */
+    align-items: center;          /* Centra el logo verticalmente con respecto a todo el bloque de la izquierda */
+}
+.panelnav{
+    gap: 1rem;                    /* Espacio prolijo entre título y barra de navegación */
+}
+.ulnav{
+    flex-direction:row;
+    width: 100%;
+    justify-content: flex-start; /*ajusta el panel de navegación a la izquierda, justo debajo del H1*/
+    }
+}
+
+/* --- BREAKPOINT DESKTOP (1024px) --- */
+@media (min-width: 1024px) {
+
+/*  ===========================
+    ESTILOS PARA INDEX.HTML
+    ===========================*/
+header h1{
+    margin-left: 2rem;
+    }
+.index-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "section1 section1"
+        "section2 section3"
+        "section4 section4";
+    gap:0 ;
+}
+    .section1 { grid-area: section1; margin-bottom: 0;}
+    .section2 { grid-area: section2; margin-right: 0.25rem;}
+    .section3 { grid-area: section3; margin-left: 0.25rem;}
+    .section4 { grid-area: section4; margin-top: 0;}
+
+/*  ===========================
+    ESTILOS PARA SERVICIOS.HTML
+    ===========================*/
+
+    .servicios-grid {
+        /* Dos columnas iguales para repartir el espacio derecho e izquierdo */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr;
+        grid-template-areas: 
+            "html-card diseno-card"
+            "html-card optimizacion-card";
+    }
+    /* Asignación de cada artículo a su área correspondiente */
+    .card-html {
+        grid-area: html-card;
+        display:flex; /*anida flex para ocupar la totalidad del espacio de la tarjeta*/
+        flex-direction: column; /*mantiene la imagen debajo del texto */
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .card-texto {
+    width: 100%;
+    text-align: left;
+    gap: 1rem; /* Crea un espacio entre el h3 y el p */
+}
+
+    .card-diseno {
+        grid-area: diseno-card;
+    }
+
+    .card-optimizacion {
+        grid-area: optimizacion-card;
+    }
+/* ====================
+   FOOTER DE ESCRITORIO
+   ====================*/
+.footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+.footer-info {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        justify-items: start;
+    }
+}

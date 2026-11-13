@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Maquetado Web</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header-principal">
+        <div class="header-content">
+            <h1>Estudio de diseño y maquetado web</h1>
+            
+            <!-- Navbar de Bootstrap -->
+            <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid navegacion">
+                    <button class="navbar-toggler boton-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="navbar-nav mi-navbar-links">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                            <a class="nav-link" href="./servicios.html">Servicios</a>
+                            <a class="nav-link" href="./portafolio.html">Portafolio</a>
+                            <a class="nav-link" href="./acerca-nosotros.html">Acerca de nosotros</a>
+                            <a class="nav-link active" aria-current="page" href="./faq.html">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <img src="../assets/img/codigo.png" alt="Imagen de logo con html y css" class="logo-header">
+    </header>
+
+    <main>
+        <h2>Preguntas Frecuentes</h2>
+        <!-- Carousel de Bootstrap -->
+        <div id="faqCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#faqCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#faqCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#faqCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <h3>¿Qué tecnologías utilizan para el desarrollo de los sitios web?</h3>
+                        <p>Trabajamos con tecnologías core estándar de la industria: HTML5 semántico para una correcta accesibilidad y SEO, y CSS3 avanzado implementando variables personalizadas, arquitectura escalable y un diseño responsivo adaptable a cualquier pantalla.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>¿Cómo es el proceso de maquetación y diseño de un proyecto?</h3>
+                        <p>El proceso comienza analizando los requerimientos y la identidad visual deseada. A partir de ahí, estructuramos el maquetado base, optimizamos los estilos globales y construimos componentes modulares y limpios.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h3>¿Los sitios web se adaptan a dispositivos móviles?</h3>
+                        <p>Absolutamente. Todo el desarrollo se realiza utilizando unidades relativas, porcentajes y diseño responsivo, garantizando una experiencia visual óptima tanto en computadoras como en celulares o tablets.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#faqCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#faqCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <h3>Contacto</h3>
+            
+            <div class="footer-info">
+                <p>Correo: xxxxxxx@gmail.com</p>
+                <p>Teléfono: +54 9 xx xxxx-xxxx</p>
+                <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+            </div>
+            
+            <div class="footer-social">
+                <span>Redes Sociales:</span>
+                <a href="#">Instagram</a> | 
+                <a href="#">LinkedIn</a> | 
+                <a href="#">X</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
