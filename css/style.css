@@ -186,6 +186,24 @@ footer a:hover {
     width:100%;
 }
 
+.index-grid section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem;
+}
+
+.index-grid .section1{
+    align-items: center;
+    text-align: center;
+}
+
+.index-grid .section4{
+    align-items: center;
+    text-align: center;
+}
+
 /*  ===========================
     ESTILOS PARA SERVICIOS.HTML
     ===========================*/
