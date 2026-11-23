@@ -275,6 +275,16 @@ footer a:hover {
 
 }
 
+/*  =================================
+    ESTILOS PARA ACERCA-NOSOTROS.HTML
+    =================================*/
+    .card.card-grunge {
+    background-color: var(--color-box-bg);
+    color: var(--color-text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.8rem;
+}
+
 /* ============
    CAROUSEL FAQ
    ============ */

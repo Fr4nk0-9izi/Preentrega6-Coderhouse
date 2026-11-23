@@ -41,26 +41,72 @@
         <img src="../assets/img/codigo.png" alt="Imagen de logo con html y css" class="logo-header">
     </header>
 
-    <main>
-        <!-- Título principal de la sección -->
-        <h2>Nuestro Equipo</h2>
-        
-        <!-- Bloque 1: Visión del estudio -->
-        <section>
-            <h3>Quiénes Somos</h3>
-            <article>
-                <p>Somos un colectivo de desarrolladores frontend y diseñadores UI/UX apasionados por la estética disruptiva, el código limpio y la arquitectura web escalable. Fusionamos la precisión lógica con conceptos visuales de alto impacto.</p>
-            </article>
-        </section>
+<main class="container my-4">
+    <section class="p-4">
+        <h2 class="mb-4">Nuestra Identidad</h2>
 
-        <!-- Bloque 2: Enfoque técnico -->
-        <section>
-            <h3>Filosofía y Desarrollo</h3>
-            <article>
-                <p>Cada proyecto se aborda de forma colaborativa: unimos la optimización de rendimiento técnico y maquetado semántico con estrategias de diseño moderno, garantizando interfaces veloces, accesibles y con una identidad visual única.</p>
-            </article>
-        </section>
-    </main>
+        <!-- Fila principal: Dos columnas lado a lado en escritorio -->
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-lg-6">
+                <div class="card card-grunge h-100 p-3">
+                    <div class="card-body">
+                        <h3 class="card-title mb-3" style="color: var(--color-secondary);">Quiénes Somos</h3>
+                        <p class="card-text">
+                            Somos un colectivo de desarrolladores frontend y diseñadores UI/UX apasionados por la estética disruptiva, el código limpio y la arquitectura web escalable. Fusionamos la precisión lógica con conceptos visuales de alto impacto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="card card-grunge h-100 p-3">
+                    <div class="card-body">
+                        <h3 class="card-title mb-3" style="color: var(--color-secondary);">Filosofía y Desarrollo</h3>
+                        <p class="card-text" >
+                            Cada proyecto se aborda de forma colaborativa: unimos la optimización de rendimiento técnico y maquetado semántico con estrategias de diseño moderno, garantizando interfaces veloces, accesibles y con una identidad visual única.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fila secundaria: 3 pilares en tarjetas compactas de Bootstrap -->
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card card-grunge h-100 p-3 text-center">
+                    <div class="card-body">
+                        <h4 class="h5 mb-2" style="color: var(--color-secondary);">Código Semántico</h4>
+                        <p class="card-text small mb-0">
+                            Estructuras limpias pensadas para el posicionamiento SEO, la accesibilidad y el mantenimiento a largo plazo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card-grunge h-100 p-3 text-center">
+                    <div class="card-body">
+                        <h4 class="h5 mb-2" style="color: var(--color-secondary);">Estética Disruptiva</h4>
+                        <p class="card-text small mb-0">
+                            Identidades visuales fuera de molde que combinan texturas urbanas con tipografías modernas de alta legibilidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card card-grunge h-100 p-3 text-center">
+                    <div class="card-body">
+                        <h4 class="h5 mb-2" style="color: var(--color-secondary);">Enfoque Mobile-First</h4>
+                        <p class="card-text small mb-0">
+                            Interfaces fluidas diseñadas desde dispositivos móviles hacia monitores de escritorio sin pérdida de rendimiento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
     <footer>
         <div class="footer-content">
